@@ -17,11 +17,11 @@ try:
 
 except:
     print("there was issue connecting")
-    
+
 transcript=YouTubeTranscriptApi.get_transcript(video_id)
 text_transcript = ""
 
 for segment in transcript:
     text_transcript += segment['text'] + " "
-    
+
 print(text_transcript)
